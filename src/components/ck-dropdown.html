@@ -1,0 +1,9 @@
+<div class="ck-dropdown__wrapper" ng-click="toggle()" ng-mouseleave="toggled = false">
+	<div class="ck-dropdown__label">
+		<span class="ck-dropdown__label-text" ng-bind="getLabel()"></span>
+		<span class="ck-dropdown__label-arrow"></span>
+	</div>
+	<div class="ck-dropdown__list" ng-class="toggled ? 'open' : ''">
+		<div class="ck-dropdown__list-item" ng-repeat="(key,option) in options track by $index" ng-bind="optionLabel(option)" ng-click="change(option); updateLabel(key)">
+	</div>
+</div>
